@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         r/LoveLive! Logo overlay
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Based on osu! overlay
 // @author       oralekin, LittleEndu, ekgame
 // @match        https://hot-potato.reddit.com/embed*
@@ -14,7 +14,7 @@ if (window.top !== window.self) {
     window.addEventListener('load', () => {
         // Load the image
         const image = document.createElement("img");
-        image.src = "https://setsunayuki.com/place/dotted.png";
+        image.src = "https://raw.githubusercontent.com/BocuD/BocuD.github.io/main/dotted.png";
         image.onload = () => {
             image.style = `position: absolute; left: 0; top: 0; width: ${image.width/3}px; height: ${image.height/3}px; image-rendering: pixelated; z-index: 1`;
         };
